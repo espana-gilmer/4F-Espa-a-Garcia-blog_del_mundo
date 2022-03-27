@@ -23,6 +23,21 @@ nav>ul>li{
 }
 nav>ul>li>a{
     text-decoration: none;
+    color: #fff;
+}
+nav{
+    font-size: 1.3rem;
+}
+nav>ul>li>a:hover{
+    text-decoration: underline;
+    color: greenyellow;
+}
+nav>ul{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5rem;
 }
 /* Fin barra de navegación */
 
@@ -81,3 +96,57 @@ section>footer {
     grid-column: span 12;
 }
 /* Termina grid */
+
+/*Empieza header de los artículos*/
+article>header>hgroup{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+article>header>hgroup>h2{
+    display: flex;
+    align-items: center;
+}
+article>header>hgroup>h2>img{
+    margin-right: 1rem;
+}
+/*Termina header de los artículos*/
+
+/*Empieza footer de los artículos*/
+#footer_blog{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0 4rem 0;
+    font-size: 1.3rem;
+}
+#footer_blog>div:nth-child(2){
+    font-size: 0.9rem;    
+}
+/*Termina footer de los artículos*/
+
+/*Empieza aside de los artículos*/
+aside h2{
+    align-items: center;
+    font-size: 1.3rem;
+}
+aside div:nth-child(odd){
+    background-color: rgb(44, 43, 43);
+}
+aside div img{
+    border-radius: 50%;
+    background-color: rgb(170, 178, 224);
+    padding: 0.5rem;
+}
+aside div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dotted #fff;
+    padding-bottom: 0.5rem;
+}
+aside div img{
+    display:flex;
+    margin-right: 1.3rem;
+}
+/*Termina aside de los artículos*/
