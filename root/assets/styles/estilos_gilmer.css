@@ -23,12 +23,37 @@ nav>ul>li{
 }
 nav>ul>li>a{
     text-decoration:none;
+    color: #fff;
 }
+nav>ul>li>a:hover{
+    text-decoration: underline;
+    color: greenyellow;
+}
+nav>ul{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.5rem;
+}
+nav{
+    font-size: 1.3rem;
+}
+
 /*Fin barra de navegación*/
 /* Inicio del footer del blog */
 #footer_blog{
     margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0 4rem 0;
+    font-size: 1.3rem;
 }
+#footer_blog div:nth-child(2){
+    font-size: 0.9rem
+}
+
 /* Fin del footer del blog */
 /*Ilustraciones*/
 .ilustracion{
@@ -76,5 +101,43 @@ section>footer{
 }
 /* Termina grid */
 
+/* Header de los articles */
+article>header>hgroup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+article>header>hgroup>h2{
+    display: flex;
+    align-items: center;
+}
+article>header>hgroup>h2>img{
+    margin-right: 1rem;
+}
+/* Termina el header de los articles */
 
-
+/*Empieza el aside del blog*/
+aside h2{
+    align-items: center;
+    font-size: 1.3rem;
+}
+aside div:nth-child(odd){
+    background-color: rgb(44, 43, 43);
+}
+aside div img{
+    border-radius: 50%;
+    background-color: rgb(170, 178, 224);
+    padding: 0.5rem;
+}
+aside div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dotted #fff;
+    padding-bottom: 0.5rem;
+}
+aside div img{
+    display:flex;
+    margin-right: 1.3rem;
+}
+/*Termina el aside del blog*/
