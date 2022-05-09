@@ -29,15 +29,31 @@ nav>ul>li>a:hover{
     text-decoration: underline;
     color: greenyellow;
 }
-nav>ul{
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
+/* desde 0 hasta 1099px se comportara asi */
+nav ul {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
     border-bottom: 1px solid #fff;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1.5rem;
 }
+/*Para pantallas grandes de 1100px en adelante*/
+@media (min-width: 1100px) {
+    nav>ul {
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 1px solid red;
+    }
+}
+/* Fin para pantallas grandes */
+/* Fin barra de navegación */
 nav{
     font-size: 1.3rem;
+    position:fixed;
+    width: 100%;
+    background-color: black;
 }
 
 /*Fin barra de navegación*/
@@ -53,7 +69,11 @@ nav{
 #footer_blog div:nth-child(2){
     font-size: 0.9rem
 }
-
+@media (max-width:1024.1xp){
+    #footer_blog{
+        align-items: center;
+    }
+}
 /* Fin del footer del blog */
 /*Ilustraciones*/
 .ilustracion{
@@ -85,14 +105,26 @@ section>header{
 grid-column: span 12;
 /* Apunta sólo a los main que son hijos directos de section */
 }
-section>main{
-/* Esta sección se extenderá 8 columnas. */
-    grid-column: span 8;
+main{
+    grid-column: span 12;
 }
+@media (min-width: 1024.1px) {
+/* Apunta sólo a los main que son hijos directos de section */
+    section>main {
+/* Esta sección se extenderá 8 columnas. */
+        grid-column: span 8;
+       }
+}
+
+aside {
+    grid-column: span 12;
+}
+@media (min-width: 1024.1px) {
 /* Apunta sólo a los aside que son hijos directos de section */
-section>aside{
-/* Esta sección se extenderá 4 columnas. */
+section>aside {
+    /* Esta sección se extenderá 4 columnas. */
     grid-column: span 4;
+    }
 }
 /* Apunta sólo a los footer que son hijos directos de section */
 section>footer{
@@ -121,7 +153,7 @@ aside h2{
     align-items: center;
     font-size: 1.3rem;
 }
-aside div:nth-child(odd){
+aside div:nth-child(2n){
     background-color: rgb(44, 43, 43);
 }
 aside div img{
@@ -131,13 +163,20 @@ aside div img{
 }
 aside div{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    border-bottom: 1px dotted #fff;
-    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #fff;
+    padding: 0.6rem;
+    gap: 1rem;
+}
+@media (min-width: 1024.1px) and (max-width:1324.1px) {
+    aside div{
+        flex-direction: column;
+    }
 }
 aside div img{
     display:flex;
     margin-right: 1.3rem;
 }
 /*Termina el aside del blog*/
+
