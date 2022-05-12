@@ -12,8 +12,9 @@ article {
 }
 #titulo_del_blog {
     text-align: center;
-    font-size: 3rem;
+    font-size: clamp(2rem, 1vw + 2rem, 7rem);
 }
+
 /* Terminan clases generales */
 
 /* Barra de navegación */
@@ -172,5 +173,11 @@ aside div img{
 }
 #footer_blog>div:nth-child(2){
     font-size: 0.9rem;    
+}
+@media (min-width: 0px) and (max-width:1024px){
+    #footer_blog{
+        display: flex;
+        flex-direction: column;
+    }
 }
 /* Fin del footer del blog */
