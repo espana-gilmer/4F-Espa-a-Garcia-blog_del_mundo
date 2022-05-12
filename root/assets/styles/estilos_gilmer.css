@@ -13,7 +13,7 @@ article{
 }
 #titulo_del_blog{
     text-align: center;
-    font-size: 3rem;
+    font-size: clamp(2rem, 1vw + 2rem, 7rem);
 }
 /* Terminan clases generales */
 /* Barra de Navegación */
