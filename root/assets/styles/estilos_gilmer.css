@@ -69,9 +69,10 @@ nav{
 #footer_blog div:nth-child(2){
     font-size: 0.9rem
 }
-@media (max-width:1024.1xp){
+@media (min-width: 0px) and (max-width:1024px){
     #footer_blog{
-        align-items: center;
+        display: flex;
+        flex-direction: column;
     }
 }
 /* Fin del footer del blog */
